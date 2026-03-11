@@ -1,7 +1,7 @@
 # Stats Card
 
 ## Purpose
-Display key statistics.
+Highlight key statistics.
 
 ## Structure
 
@@ -10,8 +10,8 @@ StatsCard
  ├ Label
  └ Context
 
-## Example
+## Examples
 
-126 Goals
-2.63 Goals per Match
-18 Clean Sheets
+126 Goals  
+18 Clean Sheets  
+87 Yellow Cards
