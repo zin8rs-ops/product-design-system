@@ -13,6 +13,6 @@ VideoCard
 
 ## Tokens
 
-background → color.surface
-radius → radius.md
+background → color.surface  
+radius → radius.md  
 shadow → shadow.card
