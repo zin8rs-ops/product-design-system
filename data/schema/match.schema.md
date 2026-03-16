@@ -1,24 +1,32 @@
 # Match Schema
 
-## Match
+Represents a football match.
 
-match_id  
-date  
-stadium  
-competition  
+Fields
 
-## Teams
+id
+league_id
+season
+matchday
+home_team_id
+away_team_id
+kickoff
+status
 
-home_team  
-away_team  
+Result
 
-## Score
+home_goals
+away_goals
 
-home_score  
-away_score  
+Example
 
-## Status
+id: bundesliga-2025-bayern-dortmund
+league_id: bundesliga
+season: 2025
+matchday: 12
 
-scheduled  
-live  
-finished
+home_team_id: bayern
+away_team_id: dortmund
+
+kickoff: 2025-11-08T18:30
+status: scheduled
