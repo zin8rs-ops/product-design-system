@@ -1,0 +1,329 @@
+# Foozi – Tactra Prediction System
+
+Version: 1.0
+Status: Core Platform Feature
+Owner: Product / Data
+Last Updated: 2026-03-13
+
+---
+
+# Objective
+
+Tactra is Foozi's core match prediction engine.
+
+It analyzes multiple football data signals and produces a **probability-based prediction** for each match.
+
+Output:
+
+* Home Win Probability
+* Draw Probability
+* Away Win Probability
+
+The system must be:
+
+Transparent
+Data-driven
+Explainable
+
+Users should understand **why a prediction exists**.
+
+---
+
+# Core Prediction Model
+
+The prediction model combines multiple factors.
+
+Each factor contributes to the final match probability.
+
+Primary factors:
+
+1. Team Form
+2. Attack Strength
+3. Defensive Stability
+4. Home Advantage
+5. Head-to-Head History
+6. Squad Availability
+7. Match Importance
+8. Recent Performance Trends
+
+Each factor generates a **score component**.
+
+The combined score produces the final prediction.
+
+---
+
+# Factor Breakdown
+
+## 1. Team Form
+
+Measures performance in the last matches.
+
+Input data:
+
+* Last 5 matches
+* Points per game
+* Goal difference
+
+Example:
+
+Team A
+
+Wins: 3
+Draws: 1
+Losses: 1
+
+Form Score: 72
+
+---
+
+## 2. Attack Strength
+
+Measures attacking efficiency.
+
+Input data:
+
+* Goals per match
+* Expected goals (xG)
+* Shots on target
+
+Example:
+
+Team A
+
+Goals per match: 2.2
+xG: 2.1
+
+Attack Score: 78
+
+---
+
+## 3. Defensive Stability
+
+Measures defensive performance.
+
+Input data:
+
+* Goals conceded
+* xGA
+* Clean sheets
+
+Example:
+
+Goals conceded per match: 0.9
+
+Defense Score: 81
+
+---
+
+## 4. Home Advantage
+
+Historical performance at home.
+
+Input:
+
+* Home win rate
+* Home goals per match
+* Crowd advantage factor
+
+Example:
+
+Home win rate: 68%
+
+Home Advantage Score: 74
+
+---
+
+## 5. Head-to-Head
+
+Historical matchup data.
+
+Input:
+
+* Last 5 meetings
+* Goal difference
+
+Example:
+
+Team A wins: 3
+Team B wins: 1
+Draws: 1
+
+H2H Score: 65
+
+---
+
+## 6. Squad Availability
+
+Measures impact of missing players.
+
+Input:
+
+* Injuries
+* Suspensions
+* Key player rating
+
+Example:
+
+2 key players missing.
+
+Availability Score: 58
+
+---
+
+## 7. Match Importance
+
+Motivation and competition pressure.
+
+Input:
+
+* League position
+* Title race
+* Relegation risk
+
+Example:
+
+Team fighting for title.
+
+Importance Score: 83
+
+---
+
+## 8. Performance Trend
+
+Short-term performance trends.
+
+Input:
+
+* Last 3 matches
+* Goal momentum
+* Recent xG trend
+
+Example:
+
+Scoring trend rising.
+
+Trend Score: 77
+
+---
+
+# Score Aggregation
+
+All components are weighted.
+
+Example weighting:
+
+Team Form – 20%
+Attack Strength – 18%
+Defense Stability – 18%
+Home Advantage – 14%
+Head-to-Head – 8%
+Squad Availability – 8%
+Match Importance – 7%
+Performance Trend – 7%
+
+The weighted scores generate:
+
+Match Strength Rating for each team.
+
+These ratings are converted into probabilities.
+
+---
+
+# Example Output
+
+Match:
+
+Arsenal vs Liverpool
+
+Prediction:
+
+Home Win: 48%
+Draw: 27%
+Away Win: 25%
+
+Top contributing factors:
+
+Arsenal strong home form
+Liverpool high attacking xG
+Even head-to-head history
+
+---
+
+# UX Presentation
+
+Tactra predictions should appear in:
+
+Homepage match cards
+Match pages
+Prediction widgets
+
+Visualization options:
+
+Probability bars
+Pie chart
+Score comparison
+
+Example display:
+
+Home Win
+██████████░░ 48%
+
+Draw
+█████░░░░░░░ 27%
+
+Away Win
+████░░░░░░░░ 25%
+
+---
+
+# Insight Layer
+
+The system must generate explainable insights.
+
+Example:
+
+Arsenal scored in 8 of the last 9 home matches.
+
+Liverpool conceded in 7 of the last 8 away matches.
+
+These insights support the prediction.
+
+---
+
+# Data Sources
+
+The system requires the following data inputs:
+
+Match results
+Expected goals (xG)
+Team statistics
+Player availability
+Historical head-to-head data
+
+---
+
+# Future Extensions
+
+Next evolution stages:
+
+Live Match Probability
+Dynamic predictions during matches.
+
+Player Impact Model
+Individual player influence score.
+
+Value Prediction Engine
+Identify betting value opportunities.
+
+---
+
+# Success Metrics
+
+Prediction model quality will be measured via:
+
+Prediction accuracy
+User engagement with predictions
+Prediction participation rate
+User trust in insights
+
+---
