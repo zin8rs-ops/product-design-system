@@ -1,2 +1,5 @@
-Read .planning/CURRENT_MILESTONE.md and show a summary 
-of done vs. open tasks per spec file.
+Read `.planning/CURRENT_MILESTONE.md` and print a concise status report:
+- Milestone name and goal
+- Completed tasks ✅
+- Pending tasks 🔲
+- Suggested next action
